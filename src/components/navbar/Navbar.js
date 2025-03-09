@@ -48,9 +48,9 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-x-3 text-blue-800 font-semibold hover:underline">
+        <div className="hidden md:flex items-center gap-x-3 text-blue-800 font-semibold ">
           {navItems.map((link, i) => (
-            <Link key={i} href={link.link}>
+            <Link key={i} href={link.link} className="hover:underline">
               {link.name} {i !== 3 && "/"}
             </Link>
           ))}
