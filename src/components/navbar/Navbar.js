@@ -24,8 +24,8 @@ const Navbar = () => {
               alt="Logo"
             />
           </span>
-          <span className="text-blue-800 font-extrabold text-lg">
-            Emmanuel <br /> Woods
+          <span className=" font-extrabold text-lg">
+            Emmanuel  Woods
           </span>
         </span>
 
