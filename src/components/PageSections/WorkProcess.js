@@ -1,65 +1,39 @@
 import React from "react";
 import { workProcess } from "../index";
-import { motion } from "framer-motion";
 
 const WorkProcess = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen w-full px-4 py-12">
       {/* Animated Heading */}
-      <motion.div
-        className="w-full flex flex-row items-center mb-12 overflow-hidden"
-        initial={{ width: 0 }}
-        whileInView={{ width: "100%" }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        viewport={{ once: false }} // Ensures animation happens every time it comes into view
-      >
+      <div className="w-full flex flex-row items-center mb-12 overflow-hidden">
         <span className="flex-grow bg-blue-800 h-[0.5px] ml-2"></span>
         <span className="whitespace-nowrap text-lg font-semibold text-blue-800 uppercase tracking-tighter mx-2">
           Process
         </span>
         <span className="flex-grow bg-blue-800 h-[0.5px] ml-2"></span>
-      </motion.div>
+      </div>
 
       {/* Process Content */}
       <div className="flex flex-col items-center justify-center w-full max-w-6xl">
-        <motion.h1
-          className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: false }}
-        >
+        <h1 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-8">
           {workProcess.heading}
-        </motion.h1>
+        </h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
           {workProcess.processes.map((process, i) => (
-            <motion.div
+            <div
               key={i}
               className="flex flex-col items-center justify-center text-center p-6 bg-white rounded-lg  hover:shadow-lg transition-shadow duration-300 group"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              viewport={{ once: false }}
-              whileHover={{ y: -5 }}
             >
-              <motion.div
-                className="text-4xl text-blue-800 mb-4 p-3 bg-blue-50 rounded-full"
-                whileHover={{ rotate: 10, scale: 1.1 }}
-                transition={{ duration: 0.2 }}
-              >
+              <div className="text-4xl text-blue-800 mb-4 p-3 bg-blue-50 rounded-full">
                 {process.icon}
-              </motion.div>
+              </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-800 transition-colors duration-300">
                 {process.heading}
               </h3>
               <p className="text-gray-600">{process.text}</p>
 
-              <motion.div
-                className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-              >
+              <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <span className="text-blue-800 font-medium cursor-pointer flex items-center">
                   Learn more
                   <svg
@@ -75,9 +49,8 @@ const WorkProcess = () => {
                     />
                   </svg>
                 </span>
-
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           ))}
         </div>
       </div>

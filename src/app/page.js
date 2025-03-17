@@ -28,32 +28,13 @@ const Home = () => {
         </div>
 
         {/* Gradient Overlay with motion animation */}
-        <motion.div
-          className="absolute inset-0 w-full h-full bg-gradient-to-t from-black z-20"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: false }} // Reanimate every time the element comes into view
-          transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
-        ></motion.div>
+        <div className="absolute inset-0 w-full h-full bg-gradient-to-t from-black z-20"></div>
 
         {/* Header Text with motion animation */}
         <div className="absolute inset-0 flex items-center justify-center z-30 px-8 md:px-10 max-w-3xl">
-          <motion.h1
-            className="text-white text-4xl md:text-5xl font-bold text-start"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{
-              opacity: 1,
-              y: 96, // 96px to match your original translate-y-24
-            }}
-            viewport={{ once: false }} // Reanimate every time the element comes into view
-            transition={{
-              duration: 0.8,
-              ease: [0.2, 0.65, 0.3, 0.9], // Custom easing curve for a nice spring feel
-              delay: 0.5,
-            }}
-          >
+          <h1 className="text-white text-4xl md:text-5xl font-bold text-start">
             {landingPageHeader}
-          </motion.h1>
+          </h1>
         </div>
       </div>
       <AboutSection />
@@ -71,7 +52,7 @@ const Home = () => {
           Your browser does not support the video tag.
         </video>
       </div>
-      <WorkProcess/>
+      <WorkProcess />
     </main>
   );
 };

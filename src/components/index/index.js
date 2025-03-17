@@ -126,7 +126,8 @@ export const contactUs = {
   text: "Feel free to call us anytime—we aim to respond to all inquiries within 24 hours.",
 };
 
-export const aboutUs = {
+export // Company data
+const aboutUs = {
   companyName: "Emmanuelwood Integrated Company Limited",
   AboutCardHeader: {
     heading: "About Us",
@@ -141,7 +142,7 @@ export const aboutUs = {
     title: "Introduction",
     text: "Emmanuelwood Integrated Company Limited is a premier construction and infrastructure development company dedicated to transforming visions into reality. Since our inception, we have been at the forefront of delivering world-class construction solutions, setting the standard for excellence, innovation, and sustainability in the industry.",
   },
-  headquarters: "[Insert location here]",
+  headquarters: "Lagos, Nigeria", // Added placeholder headquarters
   allTexts: [
     {
       section: "Mission",
@@ -217,7 +218,7 @@ export const aboutUs = {
       content: [
         {
           key: "Our Team",
-          text: "At the core of our success is a team of highly skilled professionals, engineers, architects, project managers, and craftsmen who bring their vast experience and unwavering dedication to every project. We pride ourselves on fostering a culture of collaboration, integrity, and excellence, which drives us to consistently exceed our clients’ expectations.",
+          text: "At the core of our success is a team of highly skilled professionals, engineers, architects, project managers, and craftsmen who bring their vast experience and unwavering dedication to every project. We pride ourselves on fostering a culture of collaboration, integrity, and excellence, which drives us to consistently exceed our clients' expectations.",
         },
       ],
     },
@@ -226,9 +227,11 @@ export const aboutUs = {
       content: [
         {
           key: "Our Legacy",
-          text: "Over the years, Emmanuelwood Integrated Company Limited has successfully completed numerous landmark projects that stand as a testament to our capabilities and dedication. We take immense pride in being a part of our clients’ success stories, helping them build homes, businesses, and infrastructure that endure for generations.",
+          text: "Over the years, Emmanuelwood Integrated Company Limited has successfully completed numerous landmark projects that stand as a testament to our capabilities and dedication. We take immense pride in being a part of our clients' success stories, helping them build homes, businesses, and infrastructure that endure for generations.",
         },
       ],
     },
   ],
 };
+
+ 

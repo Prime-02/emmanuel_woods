@@ -29,18 +29,12 @@ const Page = () => {
   return (
     <div className="w-full min-h-screen flex flex-col pt-24 items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       {/* Animated Title */}
-      <motion.span
-        className="w-full max-w-4xl flex flex-row items-center mb-8 sm:mb-12"
-        initial={{ width: 0 }}
-        whileInView={{ width: "100%" }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        viewport={{ once: false }}
-      >
+      <span className="w-full max-w-4xl flex flex-row items-center mb-8 sm:mb-12">
         <span className="whitespace-nowrap text-lg font-semibold text-blue-800 uppercase tracking-tighter">
           {contactUs.title}
         </span>
         <span className="flex-grow bg-blue-800 h-[0.5px] ml-2"></span>
-      </motion.span>
+      </span>
 
       {/* Contact Content */}
       <div className="w-full max-w-4xl flex flex-col md:flex-row items-center justify-between gap-8">

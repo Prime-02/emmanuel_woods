@@ -49,7 +49,7 @@ const Footer = () => {
                 {link.name}
               </Link>
               {i !== navItems.length - 1 && (
-                <span className="text-blue-800">/</span>
+                <span className="text-blue-800">|</span>
               )}
             </React.Fragment>
           ))}

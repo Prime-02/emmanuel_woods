@@ -1,5 +1,7 @@
 'use client'
+import { aboutUs } from "@/components/index";
 import React, { useState, useEffect } from "react";
+
 
 // Simple animation hook to replace framer-motion
 const useInView = (threshold = 0.1) => {
@@ -89,118 +91,10 @@ const FadeIn = ({ children, delay = 0, direction = null }) => {
 };
 
 const AboutUsPage = () => {
-  // Company data
-  const aboutUs = {
-    companyName: "Emmanuelwood Integrated Company Limited",
-    AboutCardHeader: {
-      heading: "About Us",
-      achievments: [
-        { value: 20, text: "Years of experience" },
-        { value: 32, text: "Quality Design" },
-        { value: 1500, text: "Satisfied Clients around the world" },
-      ],
-      subheading: "learn more",
-    },
-    introduction: {
-      title: "Introduction",
-      text: "Emmanuelwood Integrated Company Limited is a premier construction and infrastructure development company dedicated to transforming visions into reality. Since our inception, we have been at the forefront of delivering world-class construction solutions, setting the standard for excellence, innovation, and sustainability in the industry.",
-    },
-    headquarters: "Lagos, Nigeria", // Added placeholder headquarters
-    allTexts: [
-      {
-        section: "Mission",
-        content: [
-          {
-            key: "Mission",
-            text: "To deliver innovative and sustainable construction solutions that create value for our clients, empower communities, and shape a better future.",
-          },
-          {
-            key: "Vision",
-            text: "To become a globally recognized leader in the construction industry, known for excellence, integrity, and transformative impact.",
-          },
-        ],
-      },
-      {
-        section: "Core Values",
-        content: [
-          {
-            key: "Integrity",
-            text: "We uphold honesty, transparency, and ethical practices in every project and interaction.",
-          },
-          {
-            key: "Excellence",
-            text: "We are committed to achieving the highest standards in every aspect of our work.",
-          },
-          {
-            key: "Customer Satisfaction",
-            text: "We prioritize the needs and expectations of our clients, ensuring their complete satisfaction at every stage of the project.",
-          },
-          {
-            key: "Innovation",
-            text: "We embrace creativity and innovation to provide cutting-edge solutions to complex construction challenges.",
-          },
-          {
-            key: "Sustainability",
-            text: "We promote eco-friendly construction practices to ensure a lasting positive impact on the environment.",
-          },
-        ],
-      },
-      {
-        section: "Why Choose Us",
-        content: [
-          {
-            key: "Why Choose Us",
-            items: [
-              "Unmatched Quality: We maintain strict quality control standards and use premium materials to ensure every project meets and exceeds industry benchmarks.",
-              "Timely Delivery: Our efficient project management processes and proactive communication enable us to complete projects on schedule.",
-              "Client-Centric Approach: We place our clients at the heart of everything we do, offering personalized solutions that align with their goals and vision.",
-              "Innovation & Technology: We leverage cutting-edge technologies, modern equipment, and advanced construction methodologies to drive innovation and efficiency.",
-              "Sustainability: Our commitment to environmentally friendly practices ensures that we contribute positively to the communities and ecosystems we operate in.",
-            ],
-          },
-        ],
-      },
-      {
-        section: "Services",
-        content: [
-          {
-            key: "Our Services",
-            items: [
-              "Residential Construction: Building elegant, durable, and functional homes tailored to meet the unique lifestyles of our clients.",
-              "Commercial Construction: Developing cutting-edge office spaces, retail complexes, and business facilities that inspire productivity and success.",
-              "Industrial Construction: Designing and constructing warehouses, factories, and other industrial facilities to meet the highest operational standards.",
-              "Infrastructure Development: Delivering roads, bridges, and public infrastructure that support growth and connectivity.",
-              "Renovation & Remodeling: Upgrading existing structures to meet modern standards of aesthetics and functionality.",
-              "Project Management: Providing end-to-end project oversight, ensuring timely delivery, cost efficiency, and uncompromising quality.",
-            ],
-          },
-        ],
-      },
-      {
-        section: "Team",
-        content: [
-          {
-            key: "Our Team",
-            text: "At the core of our success is a team of highly skilled professionals, engineers, architects, project managers, and craftsmen who bring their vast experience and unwavering dedication to every project. We pride ourselves on fostering a culture of collaboration, integrity, and excellence, which drives us to consistently exceed our clients' expectations.",
-          },
-        ],
-      },
-      {
-        section: "Legacy",
-        content: [
-          {
-            key: "Our Legacy",
-            text: "Over the years, Emmanuelwood Integrated Company Limited has successfully completed numerous landmark projects that stand as a testament to our capabilities and dedication. We take immense pride in being a part of our clients' success stories, helping them build homes, businesses, and infrastructure that endure for generations.",
-          },
-        ],
-      },
-    ],
-  };
-
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <header className="bg-blue-800 text-white py-16 px-4 md:px-8">
+      <header className="bg-blue-800 min-h-screen flex items-center text-white py-16 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <FadeIn direction="down">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">

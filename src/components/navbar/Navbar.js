@@ -6,6 +6,7 @@ import Image from "next/image";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -51,7 +52,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-x-3 text-blue-800 font-semibold ">
           {navItems.map((link, i) => (
             <Link key={i} href={link.link} className="hover:underline">
-              {link.name} {i !== 3 && "/"}
+              {link.name} {i !== 3 && "|"}
             </Link>
           ))}
         </div>
