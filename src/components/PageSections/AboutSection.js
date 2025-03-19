@@ -47,13 +47,7 @@ const About_Section = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen h-auto py-16 px-5 md:px-24">
       {/* Section Header with Line */}
-      <span
-        className="w-full flex flex-row items-center mb-12"
-        initial={{ width: 0 }}
-        whileInView={{ width: "100%" }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        viewport={{ once: false }}
-      >
+      <span className="w-full flex flex-row items-center mb-12">
         <span className="whitespace-nowrap text-lg font-semibold text-blue-800 uppercase tracking-tighter">
           {subHeroContent.heading}
         </span>

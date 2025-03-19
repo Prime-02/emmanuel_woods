@@ -5,45 +5,47 @@ import Image from "next/image";
 
 const HowweWork = () => {
   return (
-    <div className="w-full md:w-[80%]  min-h-screen h-auto flex flex-col justify-start py-16 px-5 md:px-24">
-      {/* Section Header with Line */}
-      <span className="w-full flex flex-row items-center mb-12">
-        <span className="flex-grow bg-blue-800 h-[0.5px] ml-2"></span>
-        <span className="whitespace-nowrap text-lg font-semibold text-blue-800 uppercase tracking-tighter">
-          {HowWeWork.heading}
-        </span>
-      </span>
-
-      <div className="w-full flex flex-col md:flex-row justify-between gap-8 md:gap-16">
-        {/* Image Column with Animation */}
-        <div className="w-full md:w-1/2">
-          <div className="relative overflow-hidden rounded-lg shadow-lg">
-            <div>
-              <Image
-                src={imageSlide[9]}
-                width={1000}
-                height={1000}
-                alt="How We Work"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Content Column with Staggered Animation */}
-        <div className="w-full md:w-1/2 flex flex-col justify-center gap-y-5">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+    <div className="w-full bg-gray-50 py-24">
+      <div className="max-w-6xl mx-auto px-6 md:px-8">
+        <div className="w-full flex flex-col items-start max-w-3xl mx-auto">
+          {/* Main Title */}
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
             {HowWeWork.title}
           </h2>
 
-          <p className="text-gray-600 text-lg leading-relaxed mb-6">
+          {/* Divider */}
+          <div className="w-24 h-1 bg-blue-800 mb-8"></div>
+
+          {/* Content */}
+          <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-12">
             {HowWeWork.text}
           </p>
 
-          <div>
+          {/* Features Section */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-12">
+            {HowWeWork.features?.map((feature, index) => (
+              <div
+                key={index}
+                className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                  <span className="text-blue-800 text-xl font-bold">
+                    {index + 1}
+                  </span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            )) || null}
+          </div>
+
+          {/* Button */}
+          <div className="flex justify-start">
             <Button
               text={HowWeWork.buttonText}
-              className="rounded-none py-3 px-6 text-white bg-blue-800 hover:text-blue-800 hover:bg-white hover:border-blue-800 hover:border transition-all duration-300"
+              className="px-8 py-4 bg-blue-800 text-white font-medium rounded-lg hover:bg-blue-900 transition-colors duration-300 shadow-md hover:shadow-lg"
             />
           </div>
         </div>
